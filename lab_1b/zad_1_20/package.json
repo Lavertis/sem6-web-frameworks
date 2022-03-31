@@ -1,5 +1,5 @@
 {
-  "name": "zad_1_19",
+  "name": "zad_1_20",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,10 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  },
-  "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "express": "^4.17.3",
-    "express-session": "^1.17.2"
   }
 }
