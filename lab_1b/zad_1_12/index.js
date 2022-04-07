@@ -16,7 +16,7 @@ app.get('/api/users/:id', (req, res) => {
     if (found) {
         res.json(users.filter(user => user.id === parseInt(req.params.id)))
     } else {
-        res.status(400).json({msg: `Użytkownik o id ${req.params.id} został odnaleziony`})
+        res.status(400).json({msg: `Użytkownik o id ${req.params.id} nie został odnaleziony`})
     }
 })
 

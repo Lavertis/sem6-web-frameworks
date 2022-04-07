@@ -4,10 +4,9 @@ const PORT = process.env.PORT || 3000
 const routes = require('./api/routes')
 
 const middlewareMethod = require('./middleware/method')
-app.use('/metoda', middlewareMethod)
 
 app.use(express.json())
-app.use('/api/users', require('./api/routes'))
+app.use('/api/users', routes)
 
 app.post('/', middlewareMethod, (req, res) => {
 

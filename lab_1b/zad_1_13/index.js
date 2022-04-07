@@ -12,17 +12,17 @@ let middlewareMethod = (req, res, next) => {
     res.send(path + '\n' + method)
     next()
 }
-app.use('/metoda', middlewareMethod)
+app.use('/', middlewareMethod)
 
-app.post('/', middlewareMethod, (req, res) => {
-
-})
-
-app.put('/', middlewareMethod, (req, res) => {
+app.post('/', (req, res) => {
 
 })
 
-app.delete('/', middlewareMethod, (req, res) => {
+app.put('/', (req, res) => {
+
+})
+
+app.delete('/', (req, res) => {
 
 })
 
