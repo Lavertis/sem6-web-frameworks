@@ -6,11 +6,11 @@ const app = express()
 const port = 3000
 
 // Creating session
-const oneDay = 1000 * 60 * 60 * 24;
+const oneYear = 1000 * 60 * 60 * 24 * 365;
 app.use(sessions({
     secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
     saveUninitialized: true,
-    cookie: {maxAge: oneDay},
+    cookie: {maxAge: oneYear},
     resave: false
 }));
 

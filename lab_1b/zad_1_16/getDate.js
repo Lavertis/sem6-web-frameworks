@@ -1,11 +1,13 @@
 function getDate() {
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    let miliseconds = date.getMilliseconds();
+
     if (day < 10) {
         day = "0" + day;
     }
@@ -21,11 +23,13 @@ function getDate() {
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
-    return day + "." + month + "." + year + " " + hours + ":" + minutes + ":" + seconds;
-}
+    if (miliseconds < 10) {
+        miliseconds = "00" + miliseconds;
+    } else if (miliseconds < 100) {
+        miliseconds = "0" + miliseconds;
+    }
 
-// module.exports.getDate = function () {
-//     return getDate();
-// };
+    return day + "." + month + "." + year + " " + hours + ":" + minutes + ":" + seconds + "." + miliseconds;
+}
 
 module.exports = getDate;
